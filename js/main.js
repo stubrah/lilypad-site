@@ -1,0 +1,1 @@
+console.log("Lily Pad Living site loaded.");
