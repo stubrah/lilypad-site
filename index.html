@@ -6,11 +6,46 @@
   <title>Lily Pad Living</title>
   <meta name="description" content="A place to keep your head above water while you get your feet on the ground." />
   <link rel="stylesheet" href="css/styles.css" />
+  <style>
+    .logo {
+      display: flex;
+      align-items: center;
+      gap: 0.6rem;
+      text-decoration: none;
+    }
+    .logo img {
+      height: 42px;
+      width: 42px;
+      object-fit: contain;
+    }
+    .logo-text {
+      display: flex;
+      flex-direction: column;
+      line-height: 1.2;
+    }
+    .logo-name {
+      font-weight: 700;
+      font-size: 1.1rem;
+      color: #ffffff;
+    }
+    .logo-tagline {
+      font-size: 0.65rem;
+      color: #d4b8d2;
+      font-style: italic;
+      font-weight: 400;
+    }
+  </style>
 </head>
 <body>
   <header class="site-header">
     <div class="container nav">
-      <a class="logo" href="index.html">Lily Pad Living</a>
+      <a class="logo" href="index.html">
+        <img src="assets/images/LilyPadLogo.png" alt="Lily Pad Living frog logo" />
+        <div class="logo-text">
+          <span class="logo-name">Lily Pad Living</span>
+          <span class="logo-tagline">A place to keep your head above water.</span>
+        </div>
+      </a>
       <nav>
         <ul class="nav-links">
           <li><a href="about.html">About</a></li>
