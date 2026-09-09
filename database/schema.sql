@@ -172,3 +172,21 @@ CREATE TABLE AccessAssignments (
         FOREIGN KEY (DoorId)
         REFERENCES Doors(DoorId)
 );
+
+CREATE TABLE AccessLogs (
+    AccessLogId INT IDENTITY(1,1) PRIMARY KEY,
+    DoorId INT NOT NULL,
+    CredentialId INT NULL,
+    EventType NVARCHAR(50) NOT NULL,
+    EventTime DATETIME2 NOT NULL DEFAULT SYSUTCDATETIME(),
+    ExternalEventId NVARCHAR(150) NULL,
+    Details NVARCHAR(500) NULL,
+
+    CONSTRAINT FK_AccessLogs_Doors
+        FOREIGN KEY (DoorId)
+        REFERENCES Doors(DoorId),
+
+    CONSTRAINT FK_AccessLogs_Credentials
+        FOREIGN KEY (CredentialId)
+        REFERENCES Credentials(CredentialId)
+);
